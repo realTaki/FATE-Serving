@@ -16,10 +16,11 @@
 
 package com.webank.ai.fate.serving.core.bean;
 
-
+import com.google.common.util.concurrent.ListenableFuture;
+import com.webank.ai.fate.serving.core.rpc.grpc.GrpcType;
+import com.webank.ai.fate.serving.core.rpc.router.RouterInfo;
 
 public interface Context<Req, Resp> {
-
 
     static final String LOGGER_NAME = "flow";
 
@@ -40,8 +41,6 @@ public interface Context<Req, Resp> {
     public default void postProcess(Req req, Resp resp) {
     }
 
-    ;
-
     public ReturnResult getFederatedResult();
 
     public void setFederatedResult(ReturnResult returnResult);
@@ -52,6 +51,10 @@ public interface Context<Req, Resp> {
 
     public Context subContext();
 
+    public String getInterfaceName();
+
+    public void setInterfaceName(String interfaceName);
+
     public String getActionType();
 
     public void setActionType(String actionType);
@@ -60,5 +63,73 @@ public interface Context<Req, Resp> {
 
     public long getCostTime();
 
+    /**
+     * proxy
+     */
+    public GrpcType getGrpcType();
+
+    public void setGrpcType(GrpcType grpcType);
+
+    public String getVersion();
+
+    public void setVersion(String version);
+
+    public String getGuestAppId();
+
+    public void setGuestAppId(String guestAppId);
+
+    public String getHostAppid();
+
+    public void setHostAppid(String hostAppid);
+
+    public RouterInfo getRouterInfo();
+
+    public void setRouterInfo(RouterInfo routerInfo);
+
+    public Object getResultData();
+
+    public void setResultData(Object resultData);
+
+    public int getReturnCode();
+
+    public void setReturnCode(int returnCode);
+
+    public long getDownstreamCost();
+
+    public void setDownstreamCost(long downstreamCost);
+
+    public long getDownstreamBegin();
+
+    public void setDownstreamBegin(long downstreamBegin);
+
+    public long getRouteBasis();
+
+    public void setRouteBasis(long routeBasis);
+
+    public String getSourceIp();
+
+    public void setSourceIp(String sourceIp);
+
+    public String getServiceName();
+
+    public void setServiceName(String serviceName);
+
+    public String getCallName();
+
+    public void setCallName(String callName);
+
+    public String getServiceId();
+
+    public void setServiceId(String serviceId);
+
+    public String getApplyId();
+
+    public void setApplyId(String applyId);
+
+    public ListenableFuture getRemoteFuture();
+
+    public void setRemoteFuture(ListenableFuture future);
+
+    public String getResourceName();
 
 }

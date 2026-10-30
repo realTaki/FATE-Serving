@@ -17,6 +17,17 @@
 package com.webank.ai.fate.serving.core.bean;
 
 public enum ModelActionType {
+    /**
+     * MODEL_LOAD
+     */
     MODEL_LOAD,
-    MODEL_PUBLISH_ONLINE
+    /**
+     * MODEL_PUBLISH_ONLINE
+     */
+    MODEL_PUBLISH_ONLINE,
+    UNLOAD,
+    UNBIND,
+    QUERY_MODEL,
+    FETCH_MODEL,
+    MODEL_TRANSFER
 }
