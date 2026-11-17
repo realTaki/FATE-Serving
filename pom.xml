@@ -42,7 +42,7 @@
         <guava.version>33.7.1-jre</guava.version>
         <grpc.version>1.75.0</grpc.version>
         <protobuf.version>3.6.1</protobuf.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <log4j.version>2.25.5</log4j.version>
         <spring.version>5.2.22.RELEASE</spring.version>
 
