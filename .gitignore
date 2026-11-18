@@ -8,9 +8,20 @@ __pycache__
 *.class
 .project
 *.prefs
-**/target/*
 
 # excluded paths
+.idea/*
+.vscode/*
+/*/target/
+/fate-serving-admin-ui/node/
+/conf/
+/logs/
+/.fate/
+/fate-serving-admin/src/main/resources/public/
+/fate-serving-server/logs/
+
+# Preserved fork-local ignore rules
+**/target/*
 /arch/core/target/
 /arch/driver/federation/target/
 /arch/eggroll/egg/target/
@@ -28,7 +39,5 @@ __pycache__
 /arch/target/
 /fateboard/target/
 /data/
-/logs/
 /jobs/
 /audit/
-.vscode/*
