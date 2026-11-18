@@ -31,6 +31,12 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
         </dependency>
+        <!-- ParameterUtils uses this annotation directly; modern Guava no longer supplies it. -->
+        <dependency>
+            <groupId>org.checkerframework</groupId>
+            <artifactId>checker-qual</artifactId>
+            <version>3.43.0</version>
+        </dependency>
     </dependencies>
 
 </project>
